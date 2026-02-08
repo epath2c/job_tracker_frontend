@@ -36,16 +36,6 @@ export default function App() {
         const { data } = await axios.get(`${API}/result-types`);
         setResultTypes(data);
     };
-    // check the nullable number field
-    // const checkNullableNumber = (form: any) => {
-    //     console.log(form);
-    //     setForm({
-    //         ...form,
-    //         expectation: form.expectation === "" ? null : Number(form.expectation),
-    //         company_rate: form.company_rate === "" ? null : Number(form.company_rate),
-    //     });
-    //     return form;
-    // };
     useEffect(() => {
         loadJobs();
         loadResultTypes();
@@ -55,8 +45,7 @@ export default function App() {
 
     const submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // const cleanedForm = JSON.stringify(checkNullableNumber(form));
-        // console.log(cleanedForm);
+        console.log(form);
         try {
             await axios.post<Job>(API, form, {
                 headers: { "Content-Type": "application/json" },
@@ -64,8 +53,12 @@ export default function App() {
 
             setForm({ company: "", title: "" });
             loadJobs();
-        } catch (error: any) {
-            console.error("Error submitting form:", error.response?.data || error.message);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.error("Error submitting form:", error.message);
+            } else {
+                console.error("Error submitting form:", error);
+            }
         }
     };
 
@@ -113,8 +106,8 @@ export default function App() {
                             </label>
                             <input
                                 type='date'
-                                value={form.date}
-                                onChange={e => setForm({ ...form, date: e.target.value })}
+                                value={form.applied_at}
+                                onChange={e => setForm({ ...form, applied_at: e.target.value })}
                             />
                         </div>
                         <div className='form-group checkbox-wrapper'>
