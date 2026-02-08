@@ -1,0 +1,232 @@
+button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+
+    background: var(--primary-linear-background);
+
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 122, 24, 0.35);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        filter 0.15s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 12px 28px rgba(255, 122, 24, 0.45);
+}
+
+button:active {
+    transform: scale(0.97);
+    box-shadow: 0 6px 14px rgba(255, 122, 24, 0.35);
+}
+
+button:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(255, 154, 60, 0.4),
+        0 8px 20px rgba(255, 122, 24, 0.35);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(20%);
+}
+/* Form container */
+form {
+    min-width: 30%;
+    height: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #fff8f3; /* soft warm background */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(255, 122, 24, 0.2);
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+/* Inputs / textarea / Selects */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #ffae6e; /* lighter orange border */
+    background-color: #fff4ef;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #ff5f6d; /* deeper sunset orange on focus */
+    box-shadow: 0 0 8px rgba(255, 122, 24, 0.4);
+    background-color: #fff1ec;
+}
+textarea {
+    resize: vertical;
+}
+form .checkbox {
+    display: inline-block;
+}
+/* Placeholder styling */
+form ::placeholder {
+    color: #ff9a3c;
+    opacity: 0.7;
+}
+
+/* Input + label spacing */
+form .form-group {
+    margin-bottom: 1rem;
+}
+
+form .checkbox-wrapper {
+    display: flex;
+}
+form .checkbox-wrapper input {
+    transform: scale(1.5);
+    accent-color: #2563eb;
+    margin-right: 1.25rem;
+    width: auto;
+}
+form .checkbox-wrapper label {
+    padding-right: 1rem;
+    margin: 0;
+}
+
+/* Submit button (reuse sunset style) */
+form button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-linear-background);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 122, 24, 0.35);
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        filter 0.15s ease;
+}
+
+form button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 12px 28px rgba(255, 122, 24, 0.45);
+}
+
+form button:active {
+    transform: scale(0.97);
+    box-shadow: 0 6px 14px rgba(255, 122, 24, 0.35);
+}
+
+form button:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(255, 154, 60, 0.4),
+        0 8px 20px rgba(255, 122, 24, 0.35);
+}
+
+form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(20%);
+}
+/* Table container */
+.table-wrapper {
+    /* overflow-x: auto; */
+    margin: 1rem auto 0;
+    max-width: 90%;
+    background: #fff8f3;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(255, 122, 24, 0.2);
+    padding: 1rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Table element */
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+/* Table header */
+.table-wrapper thead {
+    background: linear-gradient(135deg, #ff9a3c, #ff7a18, #ff5f6d);
+    color: white;
+}
+
+.table-wrapper thead th {
+    padding: 12px 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Table body rows */
+.table-wrapper tbody tr {
+    background-color: #fff4ef;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.table-wrapper tbody tr:hover {
+    background-color: #ffe3d6;
+    transform: translateY(-1px);
+}
+
+/* Table body cells */
+.table-wrapper tbody td {
+    padding: 12px 16px;
+    text-align: center;
+    color: #333;
+    border-bottom: 1px solid #ffd1b2;
+}
+
+/* Status pills */
+.table-wrapper .status {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.table-wrapper .status.active {
+    background: #ff7a18; /* sunset orange */
+}
+
+.table-wrapper .status.pending {
+    background: #ffae6e; /* lighter orange */
+}
+
+.table-wrapper .status.inactive {
+    background: #ff5f6d; /* rose-orange */
+}
