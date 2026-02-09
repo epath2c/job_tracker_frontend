@@ -1,8 +1,9 @@
+import axios from "axios";
 import type { Job } from "~/types/Job";
 
 const API_URL = "http://localhost:5000/api/jobs";
 
-export async function getJobs(): Promise<Job[]> {
-    const res = await fetch(API_URL);
-    return res.json();
-}
+export const loadJobs = async (): Promise<Job[]> => {
+    const { data } = await axios.get<Job[]>(API_URL);
+    return data;
+};

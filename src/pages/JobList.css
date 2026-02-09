@@ -1,0 +1,73 @@
+/* Table container */
+.table-wrapper {
+    /* overflow-x: auto; */
+    margin: 1rem auto 0;
+    max-width: 90%;
+    background: #fff8f3;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(255, 122, 24, 0.2);
+    padding: 1rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Table element */
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+/* Table header */
+.table-wrapper thead {
+    background: linear-gradient(135deg, #ff9a3c, #ff7a18, #ff5f6d);
+    color: white;
+}
+
+.table-wrapper thead th {
+    padding: 12px 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Table body rows */
+.table-wrapper tbody tr {
+    background-color: #fff4ef;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.table-wrapper tbody tr:hover {
+    background-color: #ffe3d6;
+    transform: translateY(-1px);
+}
+
+/* Table body cells */
+.table-wrapper tbody td {
+    padding: 12px 16px;
+    text-align: center;
+    color: #333;
+    border-bottom: 1px solid #ffd1b2;
+}
+
+/* Status pills */
+.table-wrapper .status {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.table-wrapper .status.active {
+    background: #ff7a18; /* sunset orange */
+}
+
+.table-wrapper .status.pending {
+    background: #ffae6e; /* lighter orange */
+}
+
+.table-wrapper .status.inactive {
+    background: #ff5f6d; /* rose-orange */
+}

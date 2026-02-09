@@ -14,4 +14,11 @@ export interface Job {
 export interface CreateJobForm {
     company: string;
     title: string;
+    applied_at: Date;
+    cover_letter: boolean;
+    expectation: number;
+    result: string;
+    company_rate: number;
+    referral: boolean;
+    remark: string;
 }

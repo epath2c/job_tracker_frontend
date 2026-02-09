@@ -25,10 +25,11 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
     line-height: var(line-height);
+}
+.main {
+    justify-content: center;
+    display: flex;
 }
